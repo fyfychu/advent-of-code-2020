@@ -50,7 +50,7 @@ def find_triple_for_target_sum(target_sum, numbers):
     return -1, 1
 
 number, second_number = find_pair_for_target_sum(int(target_sum), numbers)
-print('{}*{} = {}'.format(number, second_number, number * second_number))
+print(f'{number}*{second_number} = {number*second_number}')
 
 number, second_number, third_number = find_triple_for_target_sum(int(target_sum), numbers)
-print('{}*{}*{} = {}'.format(number, second_number, third_number, number * second_number * third_number))
+print(f'{number}*{second_number}*{third_number} = {number*second_number*third_number}')
