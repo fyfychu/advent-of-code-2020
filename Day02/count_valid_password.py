@@ -18,8 +18,7 @@ def is_password_match_position_rule(rule_and_password):
     first_pos, second_pos= rule_and_password['count_range'].split('-')
     password = rule_and_password['password']
     letter = rule_and_password['letter']
-    return ((password[int(first_pos) -1] == letter) ^ (password[int(second_pos) -1] == letter)) and \
-            ((password[int(first_pos) -1] == letter) or (password[int(second_pos) -1] == letter))
+    return ((password[int(first_pos) -1] == letter) ^ (password[int(second_pos) -1] == letter))
 
 def get_valid_count(rules_and_passwords):
     valid_count_range = 0
