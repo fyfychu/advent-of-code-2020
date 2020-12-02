@@ -1,13 +1,12 @@
 import sys
 
 file_name = sys.argv[1]
-with open(file_name, 'r') as file:
-    lines = file.readlines()
 
 rules_and_passwords = []
-for line in lines:
-    count_range, letter, password = line.split()
-    rules_and_passwords.append({'count_range': count_range, 'letter': letter[:-1], 'password': password})
+with open(file_name, 'r') as file:
+    for line in file:
+        count_range, letter, password = line.split()
+        rules_and_passwords.append({'count_range': count_range, 'letter': letter[:-1], 'password': password})
 
 def is_password_match_range_rule(rule_and_password):
     min_count, max_count = rule_and_password['count_range'].split('-')

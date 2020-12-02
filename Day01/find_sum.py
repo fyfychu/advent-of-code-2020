@@ -2,11 +2,7 @@ import sys
 
 file_name, target_sum = sys.argv[1:]
 with open(file_name, 'r') as file:
-   lines = file.readlines()
-
-numbers = []
-for line in lines:
-   numbers.append(int(line))
+   numbers = [int(line) for line in file]
 
 numbers.sort()
 
