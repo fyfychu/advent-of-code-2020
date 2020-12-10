@@ -37,9 +37,6 @@ def count_combinations(input_nums, start):
         for n in range(1, 4):
             if (start + n) in input_nums:
                 next_input_nums = copy.deepcopy(input_nums)
-                if start in next_input_nums:
-                    next_input_nums.remove(start)
-                next_input_nums.remove(start+n)
                 next_input_nums = [x for x in next_input_nums if x > start + n]
                 key = (start + n, len(next_input_nums), sum(next_input_nums))
                 if key in cache:
